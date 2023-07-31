@@ -45,7 +45,14 @@ const NavBar = () => {
                         </button>
 
                         <Link href="/profile">
-                            {/*Profile Image */}
+                            <Image
+                                src="/assets/images/logo.svg"
+                                width={37}
+                                height={37}
+                                className="rounded-full"
+                                alt="profile"
+
+                            />
                         </Link>
 
                     </div>
@@ -96,6 +103,16 @@ const NavBar = () => {
                                 >
                                     Create Prompt
                                 </Link>
+                                <button
+                                    type="button"
+                                    onClick={() => {
+                                        settoggleDropDown(false);
+                                        signOut();
+                                    }}
+                                    className="mt-5 w-full black_btn"
+                                >
+                                    Sign Out
+                                </button>
                             </div>
                         )}
                     </div>

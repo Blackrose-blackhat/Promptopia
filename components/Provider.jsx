@@ -1,8 +1,11 @@
-import React from 'react'
-
-const Provider = () => {
+"use client"
+//session Provider is used to call a hook useSession() to see if someone is signed in or not.
+import { SessionProvider } from 'next-auth/react'
+const Provider = ({ children, session }) => {
     return (
-        <div>Provider</div>
+        <SessionProvider session={session}>
+            {children}
+        </SessionProvider>
     )
 }
 
