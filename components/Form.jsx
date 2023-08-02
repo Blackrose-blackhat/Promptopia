@@ -5,7 +5,8 @@ const Form = ({
     post,
     setPost,
     submitting,
-    handleSubmit
+    handleSubmit,
+
 }) => {
     return (
         <section className='w-full max-w-full flex-start flex-col'>
@@ -37,18 +38,19 @@ const Form = ({
                 </label>
                 <label>
                     <span className='font-satoshi font-semibold text-base text-gray-700'>
-                        Tags {' '}
+                        Field of Prompt{" "}
                         <span className='font-normal'>
-                            (#product #webdevelopment #androiddevelopment)
+                            (#product, #webdevelopment, #idea, etc.)
                         </span>
                     </span>
                     <input
                         value={post.tag}
                         onChange={(e) => setPost({ ...post, tag: e.target.value })}
-                        placeholder='#tags'
+                        type='text'
+                        placeholder='#Tag'
+                        required
                         className='form_input'
-                    >
-                    </input>
+                    />
                 </label>
                 <div className='flex-end mx-3 mb-5 gap-4'>
                     <Link href='/' className='text-grey-500 text-sm'>
