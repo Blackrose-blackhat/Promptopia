@@ -19,7 +19,7 @@ const PromptCardList = ({ data, handleTagClick }) => {
                         handleTagClick={handleTagClick}
                     />
                 ))
-            ) : <p> No data available in array</p>
+            ) : <p> No data available in </p>
             }
         </div>
     )
@@ -38,17 +38,12 @@ const Feed = () => {
 
         const data = await res.json();
         setposts(data);
-
-
     }
-
     useEffect(() => {
 
         fetchPosts();
 
     }, [])
-
-
     return (
         <section className='feed'>
             <form className='relative w-full flex-center'>
